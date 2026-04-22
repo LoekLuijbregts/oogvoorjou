@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Irina biedt gespecialiseerde dementiebegeleiding aan huis in Tilburg en omgeving. 15 jaar ervaring. Vergoed via PGB, WMO of WLZ. Voor mensen met dementie én hun mantelzorgers.">
+  <meta name="keywords" content="dementiebegeleiding Tilburg, thuisbegeleiding dementie, PGB dementie Tilburg, WMO begeleiding dementie, mantelzorger dementie Tilburg, Oog voor Jou">
+  <title>Oog voor Jou – Dementiebegeleiding aan huis in Tilburg | Irina</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Oog voor Jou – Dementiebegeleiding aan huis in Tilburg">
+  <meta property="og:description" content="Gespecialiseerde thuisbegeleiding voor mensen met dementie. Vergoed via PGB, WMO of WLZ. Irina begeleidt al 15 jaar met kennis, liefde en structuur.">
+  <meta property="og:url" content="https://www.oogvoorjou.info">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:     #FAF6F1;
+      --warm-white:#FFFDF9;
+      --terracotta:#C4714A;
+      --terracotta-light: #E8A882;
+      --terracotta-pale: #F5DDD0;
+      --sage:      #7A9E87;
+      --sage-light:#C8DDD0;
+      --sage-pale: #EAF2ED;
+      --charcoal:  #2C2420;
+      --brown-mid: #6B4F3A;
+      --brown-light:#A07858;
+      --lavender:  #D4CCE8;
+      --lavender-pale: #F0EDF8;
+      --text:      #2C2420;
+      --text-soft: #5C4A3A;
+      --text-muted:#8C7060;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250,246,241,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196,113,74,0.15);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo span {
+      color: var(--terracotta);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--terracotta); }
+
+    .nav-cta {
+      background: var(--terracotta);
+      color: white !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      font-size: 0.88rem !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--brown-mid) !important; color: white !important; }
+
+    /* ─── HERO ───────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      padding: 64px 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem) 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--text-soft);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--terracotta);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 3rem;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      background: var(--brown-mid);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      color: var(--text-soft);
+      padding: 0.9rem 1.5rem;
+      border-radius: 3rem;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1.5px solid rgba(107,79,58,0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--terracotta-pale) 0%, #E8C4A8 60%, #D4A882 100%);
+      z-index: 0;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0;
+      animation: imgReveal 1.2s 0.3s forwards;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 3rem;
+      left: -2rem;
+      background: white;
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 8px 32px rgba(44,36,32,0.12);
+      max-width: 220px;
+      z-index: 3;
+      opacity: 0;
+      animation: fadeUp 0.8s 1.2s forwards;
+    }
+
+    .hero-badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      line-height: 1;
+    }
+
+    .hero-badge-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-top: 0.3rem;
+    }
+
+    /* ─── SECTION BASICS ─────────────────────────── */
+    section {
+      padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    /* ─── RECOGNITION STRIP ──────────────────────── */
+    .recognition {
+      background: var(--charcoal);
+      padding: 3.5rem clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .recognition-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .recognition-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-style: italic;
+      color: var(--terracotta-light);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      line-height: 1.4;
+    }
+
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0;
+    }
+
+    .recognition-item {
+      padding: 1.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .recognition-item:last-child { border-right: none; }
+
+    .recognition-check {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .recognition-item p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+
+    /* ─── MANTELZORGER SECTION ───────────────────── */
+    .mantelzorger {
+      background: var(--warm-white);
+    }
+
+    .mantelzorger-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .mantelzorger-text .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .mantelzorger-lead {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .mantelzorger-quote {
+      background: var(--terracotta-pale);
+      border-left: 3px solid var(--terracotta);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 0.75rem 0.75rem 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-top: 1.5rem;
+    }
+
+    .mantelzorger-image {
+      position: relative;
+    }
+
+    .mantelzorger-img-wrap {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--terracotta-pale);
+    }
+
+    .mantelzorger-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mantelzorger-float {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--sage);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      border-radius: 1rem;
+      max-width: 200px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      box-shadow: 0 8px 24px rgba(44,36,32,0.15);
+    }
+
+    .mantelzorger-float strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ─── VERHAAL / IRINA ────────────────────────── */
+    .verhaal {
+      background: var(--sage-pale);
+    }
+
+    .verhaal-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .verhaal-text p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+      font-weight: 300;
+    }
+
+    .verhaal-text p strong {
+      color: var(--charcoal);
+      font-weight: 400;
+    }
+
+    .verhaal-aside {
+      position: sticky;
+      top: 90px;
+    }
+
+    .verhaal-img-wrap {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--sage-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .verhaal-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .verhaal-credentials {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    .credential-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(122,158,135,0.2);
+    }
+
+    .credential-item:last-child { border-bottom: none; }
+
+    .credential-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--sage-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
+    }
+
+    .credential-text {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .credential-text strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      font-weight: 400;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ─── DIENSTEN ───────────────────────────────── */
+    .diensten {
+      background: var(--cream);
+    }
+
+    .diensten-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .diensten-header .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .diensten-header p {
+      color: var(--text-soft);
+      font-weight: 300;
+      font-size: 1.05rem;
+    }
+
+    .diensten-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .dienst-card {
+      background: var(--warm-white);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      border: 1px solid rgba(196,113,74,0.1);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .dienst-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(44,36,32,0.08);
+    }
+
+    .dienst-card.featured {
+      background: var(--terracotta);
+      border-color: transparent;
+      grid-row: span 1;
+    }
+
+    .dienst-card.featured * { color: white !important; }
+    .dienst-card.featured .dienst-tag { background: rgba(255,255,255,0.2); }
+
+    .dienst-icon {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .dienst-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .dienst-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .dienst-tag {
+      display: inline-block;
+      background: var(--terracotta-pale);
+      color: var(--terracotta);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2rem;
+      margin-top: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* Binnen & Buiten */
+    .bb-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .bb-card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 2rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      border: 1px solid rgba(122,158,135,0.2);
+    }
+
+    .bb-icon {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+    }
+
+    .bb-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    .bb-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── WERKWIJZE ──────────────────────────────── */
+    .werkwijze {
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .werkwijze .section-label { color: var(--terracotta-light); }
+    .werkwijze .section-title { color: white; }
+
+    .werkwijze-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .werkwijze-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .werkwijze-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1.25rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+    }
+
+    .werkwijze-step:last-child { border-bottom: none; }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      line-height: 1;
+      padding-top: 0.2rem;
+    }
+
+    .step-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .step-content p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .werkwijze-visual {
+      position: sticky;
+      top: 90px;
+    }
+
+    .vergoeding-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .vergoeding-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: white;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .vergoeding-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      align-items: flex-start;
+    }
+
+    .vergoeding-item:last-child { border-bottom: none; }
+
+    .v-badge {
+      background: var(--terracotta);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.3rem;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .v-badge.wmo { background: var(--sage); }
+    .v-badge.wlz { background: var(--brown-mid); }
+
+    .vergoeding-item p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    .vergoeding-item strong {
+      display: block;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 0.2rem;
+    }
+
+    .werkwijze-cta-note {
+      background: var(--terracotta);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      font-size: 0.92rem;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .werkwijze-cta-note strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ─── REVIEWS ────────────────────────────────── */
+    .reviews {
+      background: var(--lavender-pale);
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 2px 16px rgba(44,36,32,0.06);
+    }
+
+    .review-card:nth-child(2) {
+      margin-top: 2rem;
+    }
+
+    .review-quote {
+      font-size: 3rem;
+      color: var(--lavender);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .review-text {
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .review-year {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .review-stars {
+      color: #F0A500;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ─── VOOR WIE ───────────────────────────────── */
+    .voor-wie {
+      background: var(--warm-white);
+    }
+
+    .voor-wie-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .voor-wie-col h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--charcoal);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .voor-wie-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .voor-wie-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.97rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .voor-wie-list li::before {
+      content: '→';
+      color: var(--terracotta);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ─── CONTACT ────────────────────────────────── */
+    .contact {
+      background: linear-gradient(135deg, var(--terracotta-pale) 0%, var(--cream) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,113,74,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-text .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-text p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .when-list {
+      margin: 1.5rem 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .when-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--charcoal);
+    }
+
+    .when-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      box-shadow: 0 8px 40px rgba(44,36,32,0.1);
+      position: sticky;
+      top: 90px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card .lead {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-method {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      border: 1px solid rgba(196,113,74,0.15);
+    }
+
+    .contact-method:hover {
+      background: var(--terracotta-pale);
+    }
+
+    .contact-method-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--terracotta-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-method-text strong {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-method-text span {
+      font-size: 1rem;
+      color: var(--charcoal);
+    }
+
+    .contact-note {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--sage-pale);
+      border-radius: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+      text-align: center;
+    }
+
+    footer .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-logo span { color: var(--terracotta-light); }
+
+    footer p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--terracotta-light); }
+
+    /* ─── ANIMATIONS ─────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes imgReveal {
+      from { opacity: 0; transform: scale(1.04); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-right {
+        height: 55vw;
+        min-height: 320px;
+      }
+
+      .hero-badge { display: none; }
+
+      .mantelzorger-grid,
+      .verhaal-grid,
+      .werkwijze-grid,
+      .contact-grid,
+      .voor-wie-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .verhaal-aside,
+      .contact-card {
+        position: static;
+      }
+
+      .diensten-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-card:nth-child(2) { margin-top: 0; }
+
+      .nav-links { display: none; }
+
+      .bb-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .diensten-grid { grid-template-columns: 1fr; }
+      .recognition-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">Oog voor <span>Jou</span></a>
+  <ul class="nav-links">
+    <li><a href="#irina">Over Irina</a></li>
+    <li><a href="#diensten">Begeleiding</a></li>
+    <li><a href="#vergoeding">Vergoeding</a></li>
+    <li><a href="#ervaringen">Ervaringen</a></li>
+    <li><a href="#contact" class="nav-cta">Bel of mail mij</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Dementiebegeleiding aan huis · Tilburg & omgeving</p>
+    <h1 class="hero-title">
+      Jij hebt al<br>
+      zo lang <em>alles</em><br>
+      gedragen.
+    </h1>
+    <p class="hero-sub">
+      Irina begeleidt mensen met dementie thuis — zodat jij als mantelzorger weer even kunt ademen. Met 15 jaar ervaring, echte aandacht, en zorg die vergoed wordt via PGB, WMO of WLZ.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Neem contact op</a>
+      <a href="#irina" class="btn-ghost">Lees Irina's verhaal</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Vervang de src hieronder door een echte foto van Irina met cliënt -->
+    <img
+      src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80"
+      alt="Irina in gesprek met een cliënt aan tafel"
+      class="hero-img"
+    >
+    <div class="hero-badge">
+      <div class="hero-badge-num">15</div>
+      <div class="hero-badge-text">jaar gespecialiseerde dementie&shy;begeleiding</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HERKENNING ────────────────────────────────── -->
+<div class="recognition">
+  <div class="recognition-inner">
+    <p class="recognition-title">"Ik doe het al jaren zelf. Maar soms weet ik niet meer hoe ik het moet volhouden."</p>
+    <div class="recognition-grid">
+      <div class="recognition-item">
+        <div class="recognition-check">✓</div>
+        <p>Je rolt er jaren geleden in gerold — en het wordt steeds zwaarder zonder dat je het merkt</p>
+      </div>
+      <div class="recognition-item">
+        <div class="recognition-check">✓</div>
+        <p>Je voelt je schuldig als je even niet beschikbaar bent, ook al ben je uitgeput</p>
+      </div>
+      <div class="recognition-item">
+        <div class="recognition-check">✓</div>
+        <p>Je wilt professionele hulp, maar je weet niet hoe je dat geregeld krijgt</p>
+      </div>
+      <div class="recognition-item">
+        <div class="recognition-check">✓</div>
+        <p>Je naaste wil thuis blijven — en jij wilt dat ook, maar niet ten koste van alles</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── VOOR DE MANTELZORGER ──────────────────────── -->
+<section class="mantelzorger" id="mantelzorger">
+  <div class="section-inner">
+    <div class="mantelzorger-grid">
+      <div class="mantelzorger-text reveal">
+        <p class="section-label">Voor jou als mantelzorger</p>
+        <h2 class="section-title">
+          Je verdient<br>ook <em>ruimte</em>.
+        </h2>
+        <p class="mantelzorger-lead">
+          Partners, kinderen, broers en zussen — ze zorgen soms al jaren voor iemand met dementie voordat ze hulp vragen. Niet omdat ze geen hulp willen, maar omdat het om hulp vragen al zo lang wacht.
+        </p>
+        <p class="mantelzorger-lead">
+          Irina begeleidt niet alleen de persoon met dementie. Ze begeleidt ook jou door de stappen: van eerste gesprek tot vergoeding geregeld. Zodat jij niet alleen de zorg draagt, maar ook de bureaucratie.
+        </p>
+        <div class="mantelzorger-quote">
+          "Door Irina kregen wij — haar kinderen — ruimte om zelf op adem te komen."
+        </div>
+      </div>
+
+      <div class="mantelzorger-image reveal">
+        <div class="mantelzorger-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
+            alt="Irina buiten met cliënt"
+          >
+        </div>
+        <div class="mantelzorger-float">
+          <strong>800.000</strong>
+          mantelzorgers in Nederland zorgen voor iemand met dementie
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── IRINA'S VERHAAL ───────────────────────────── -->
+<section class="verhaal" id="irina">
+  <div class="section-inner">
+    <div class="verhaal-grid">
+      <div class="verhaal-text reveal">
+        <p class="section-label">Over Irina</p>
+        <h2 class="section-title">
+          Zij zag wat anderen<br><em>niet zagen.</em>
+        </h2>
+
+        <p>Veertien jaar geleden werkte Irina in de thuiszorg. Ze was net gestart, nog niet gekwalificeerd op papier. Maar wat ze zag, schrok haar. <strong>Mensen met dementie die langzaam verdwenen in eenzaamheid.</strong> Huizen die vol en vies werden. Contacten die wegvielen. En zogenaamde vakspecialisten die haar vroegen hoe ze met die situaties om moesten gaan.</p>
+
+        <p>Ze pakte het anders aan. Op tientallen adressen hielp ze mensen met lichte dementieverschijnselen: aandacht geven, structuur brengen, kleine stapjes zetten. Van een overvol huis naar een opgeruimd leven. <strong>Mensen werden weer gezien. Werden trots.</strong> Konden familie en vrienden weer ontvangen.</p>
+
+        <p>Dat stak haar vuur aan. Ze ging studeren — VZMZ, Verzorgende IG, persoonlijk begeleider. Daarna negen jaar lang in een kleinschalige woonvorm voor mensen met ernstige geheugenproblemen. Een geweldig team. Diep werk. Veel geleerd.</p>
+
+        <p>Maar iets bleef knagen. <strong>Door heel Nederland komen mensen met dementie steeds later — en dus slechter — in contact met gespecialiseerde begeleiding.</strong> Terwijl de eerste jaren thuis zo'n verschil kunnen maken. Voor de persoon met dementie. Voor de mantelzorger. Voor het hele gezin.</p>
+
+        <p>Daarom startte Irina Oog voor Jou. Niet voor mensen in een instelling — voor mensen thuis. Vroeg genoeg om écht te helpen.</p>
+      </div>
+
+      <div class="verhaal-aside">
+        <div class="verhaal-img-wrap">
+          <!-- Vervang door echte foto van Irina -->
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80"
+            alt="Irina Luijbregts"
+          >
+        </div>
+        <div class="verhaal-credentials">
+          <div class="credential-item">
+            <div class="credential-icon">🎓</div>
+            <div class="credential-text">
+              <strong>Opleiding</strong>
+              VZMZ, Verzorgende IG, Persoonlijk begeleider
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">🏠</div>
+            <div class="credential-text">
+              <strong>9 jaar</strong>
+              kleinschalige woonvorm voor mensen met dementie
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">📍</div>
+            <div class="credential-text">
+              <strong>Werkgebied</strong>
+              Tilburg en omgeving
+            </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">💛</div>
+            <div class="credential-text">
+              <strong>Aanpak</strong>
+              Persoonlijk, liefdevol, gestructureerd
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DIENSTEN ──────────────────────────────────── -->
+<section class="diensten" id="diensten">
+  <div class="section-inner">
+    <div class="diensten-header reveal">
+      <p class="section-label">Wat Irina doet</p>
+      <h2 class="section-title">Begeleiding die past<br>bij <em>jouw</em> leven.</h2>
+      <p>Irina bezoekt 1 tot 5 keer per week — thuis, buiten, waar het nodig is. Alles op maat, alles gericht op wat nog wél kan.</p>
+    </div>
+
+    <div class="diensten-grid reveal">
+      <div class="dienst-card">
+        <div class="dienst-icon">🗓️</div>
+        <div class="dienst-title">Dagelijks leven bewaren</div>
+        <p class="dienst-desc">Afspraken maken en nakomen, structuur in de dag, contact met huisarts, vrienden en familie.</p>
+        <span class="dienst-tag">Vergoed via PGB/WMO/WLZ</span>
+      </div>
+
+      <div class="dienst-card featured">
+        <div class="dienst-icon">👁️</div>
+        <div class="dienst-title">Persoonlijk — oog voor wie jij bent</div>
+        <p class="dienst-desc">Wie ben jij, wat is jouw verhaal? Irina begeleidt vanuit wie iemand is — niet vanuit de ziekte.</p>
+        <span class="dienst-tag">Onderscheidend</span>
+      </div>
+
+      <div class="dienst-card">
+        <div class="dienst-icon">🚶</div>
+        <div class="dienst-title">Bewegen & buiten zijn</div>
+        <p class="dienst-desc">Wandelen, gym of fysiotherapie. Dagelijks even naar buiten doet goed — voor lichaam én geest.</p>
+        <span class="dienst-tag">Vergoed via PGB/WMO/WLZ</span>
+      </div>
+
+      <div class="dienst-card">
+        <div class="dienst-icon">🎨</div>
+        <div class="dienst-title">Hobby's levend houden</div>
+        <p class="dienst-desc">Breien, muziek, puzzelen, koken — wat iemand blij maakt, bewaar je zo lang mogelijk samen.</p>
+        <span class="dienst-tag">Vergoed via PGB/WMO/WLZ</span>
+      </div>
+
+      <div class="dienst-card">
+        <div class="dienst-icon">🛒</div>
+        <div class="dienst-title">Boodschappen & koken</div>
+        <p class="dienst-desc">Samen de boodschappen doen, maaltijden bereiden. Gewone dingen, samen gedaan.</p>
+        <span class="dienst-tag">Vergoed via PGB/WMO/WLZ</span>
+      </div>
+
+      <div class="dienst-card">
+        <div class="dienst-icon">💐</div>
+        <div class="dienst-title">Ceremonies & bijzondere momenten</div>
+        <p class="dienst-desc">Irina kleedt, föhnt, maakt op en begeleidt bij verjaardagen, bruiloften, uitvaarten — momenten die tellen.</p>
+        <span class="dienst-tag">Particulier (niet vergoed)</span>
+      </div>
+    </div>
+
+    <div class="bb-strip reveal">
+      <div class="bb-card">
+        <div class="bb-icon">🏡</div>
+        <div>
+          <h3>Binnen</h3>
+          <p>Waar we leven, eten, zitten en slapen. Maar ook waar we puzzelen, muziek maken, dansen, koken of breien.</p>
+        </div>
+      </div>
+      <div class="bb-card">
+        <div class="bb-icon">🌳</div>
+        <div>
+          <h3>Buiten</h3>
+          <p>Waar lichaam en geest opbloeien door beweging. Het hoeft niet snel — ga alsjeblieft (weer) mee naar buiten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WERKWIJZE & VERGOEDING ────────────────────── -->
+<section class="werkwijze" id="vergoeding">
+  <div class="section-inner">
+    <div class="werkwijze-grid">
+      <div class="werkwijze-steps reveal">
+        <p class="section-label">Hoe het werkt</p>
+        <h2 class="section-title" style="margin-bottom:2.5rem">Van eerste gesprek<br>tot <em>eerste bezoek.</em></h2>
+
+        <div class="werkwijze-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Bel of mail — zonder verplichtingen</h3>
+            <p>We spreken af wanneer het uitkomt. Irina luistert, stelt vragen en kijkt samen wat het beste past bij de situatie.</p>
+          </div>
+        </div>
+
+        <div class="werkwijze-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Kennismaking thuis</h3>
+            <p>Irina komt langs. Ze leert de persoon met dementie kennen — wie ze zijn, wat ze fijn vinden, wat hun dag mooier maakt.</p>
+          </div>
+        </div>
+
+        <div class="werkwijze-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Vergoeding regelen</h3>
+            <p>Irina helpt bij het aanvragen van PGB, WMO of WLZ. Zodat de zorg betaald wordt en jij je daar geen zorgen over hoeft te maken.</p>
+          </div>
+        </div>
+
+        <div class="werkwijze-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Begeleiding op maat starten</h3>
+            <p>1 tot 5 bezoeken per week. Altijd persoonlijk, altijd afgestemd op wat die dag nodig is.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="werkwijze-visual reveal">
+        <div class="vergoeding-box">
+          <h3>💶 Vergoed via</h3>
+
+          <div class="vergoeding-item">
+            <div class="v-badge">PGB</div>
+            <div>
+              <p><strong>Persoonsgebonden Budget</strong>Kies zelf je zorgverlener. Irina regelt de papieren samen met jou.</p>
+            </div>
+          </div>
+
+          <div class="vergoeding-item">
+            <div class="v-badge wmo">WMO</div>
+            <div>
+              <p><strong>Gemeente Tilburg</strong>Via het wijkteam of WMO-loket. Individuele Begeleiding voor thuiswonende mensen met dementie.</p>
+            </div>
+          </div>
+
+          <div class="vergoeding-item">
+            <div class="v-badge wlz">WLZ</div>
+            <div>
+              <p><strong>Wet Langdurige Zorg</strong>Voor wie 24 uur per dag zorg of toezicht nodig heeft. Via het CIZ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="werkwijze-cta-note">
+          <strong>Weet je niet waar je moet beginnen?</strong>
+          Bel Irina. Ze legt rustig uit welke route het beste past bij jullie situatie — en helpt het aanvragen.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REVIEWS ───────────────────────────────────── -->
+<section class="reviews" id="ervaringen">
+  <div class="section-inner">
+    <div class="reviews-header reveal">
+      <p class="section-label">Ervaringen</p>
+      <h2 class="section-title">Wat families <em>zeggen.</em></h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"</div>
+        <p class="review-text">Irina weet echt voorbij de dementie te kijken en dat verdient veel waardering. Mama voelde zich gezien en gewaardeerd als mens, niet alleen als iemand met een ziekte. Die persoonlijke benadering heeft ons echt goed gedaan in een periode van loslaten. Dankjewel Irina dat je zo lief was voor mama.</p>
+        <p class="review-year">Familie van cliënte · 2026</p>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"</div>
+        <p class="review-text">Wat zijn wij blij dat Irina de persoonlijke begeleider was voor mama. Zij nam de tijd om mama (en ons) echt te leren kennen, wie mama was en wat ze belangrijk vond. Haar positieve benadering zorgde voor rust en vertrouwen.</p>
+        <p class="review-year">Familie van cliënte · 2025</p>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"</div>
+        <p class="review-text">Irina heeft bijna vier jaar voor mijn moeder gezorgd. Ze nam de tijd om mijn moeder écht te zien, ook als ze onrustig of verward was. Irina dacht mee, nam initiatief en voelde feilloos aan wat nodig was — een wandeling, een gesprek of gewoon even zitten en naar muziek luisteren. Door Irina kregen wij — haar kinderen — ruimte om zelf op adem te komen.</p>
+        <p class="review-year">Familie van cliënte · 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VOOR WIE ───────────────────────────────────── -->
+<section class="voor-wie">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center; max-width:580px; margin:0 auto 3rem;">
+      <p class="section-label">Voor wie</p>
+      <h2 class="section-title">Herken jij <em>deze situatie?</em></h2>
+    </div>
+
+    <div class="voor-wie-grid reveal">
+      <div class="voor-wie-col">
+        <h3>🏠 Voor de persoon met dementie</h3>
+        <ul class="voor-wie-list">
+          <li>Je wilt zo lang mogelijk thuis blijven wonen</li>
+          <li>Je merkt dat de dagstructuur moeilijker wordt</li>
+          <li>Je wilt je hobby's en contacten bewaren</li>
+          <li>Je bent klaar voor iemand die met je meeleeft, niet over je beslist</li>
+          <li>Je bent in Tilburg of de regio gevestigd</li>
+        </ul>
+      </div>
+
+      <div class="voor-wie-col">
+        <h3>💛 Voor de mantelzorger</h3>
+        <ul class="voor-wie-list">
+          <li>Je zorgt al tijden voor je partner, ouder of naaste</li>
+          <li>Je merkt dat het te zwaar wordt, maar weet niet hoe je hulp vraagt</li>
+          <li>Je wil iemand die professioneel is én echt betrokken</li>
+          <li>Je wil vergoede begeleiding maar het systeem is ondoorzichtig</li>
+          <li>Je wil vertrouwelijk praten over veranderingen die je ziet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">
+          Wanneer is het<br>verstandig om<br>te <em>bellen?</em>
+        </h2>
+
+        <p>Als je ergens in je hoofd weet dat het niet langer alleen kan. Als je naaste verdient dat iemand echt naar haar of hem kijkt. Als je het systeem niet snapt maar wél wil dat het geregeld wordt.</p>
+
+        <div class="when-list">
+          <div class="when-item">
+            <div class="when-dot"></div>
+            <span>Jij of je naaste verdient hulp</span>
+          </div>
+          <div class="when-item">
+            <div class="when-dot"></div>
+            <span>Je wilt vertrouwelijk praten over veranderingen</span>
+          </div>
+          <div class="when-item">
+            <div class="when-dot"></div>
+            <span>Je wil binnen 1 tot 24 maanden vergoede begeleiding starten</span>
+          </div>
+        </div>
+
+        <p style="font-size:0.95rem; color:var(--text-muted);">
+          Irina werkt in Tilburg en omgeving. Het eerste gesprek is altijd vrijblijvend en kosteloos.
+        </p>
+      </div>
+
+      <div class="contact-card reveal">
+        <h3>Neem contact op</h3>
+        <p class="lead">Direct bereikbaar. Altijd persoonlijk.</p>
+
+        <a href="tel:0657938191" class="contact-method">
+          <div class="contact-method-icon">📞</div>
+          <div class="contact-method-text">
+            <strong>Bellen</strong>
+            <span>06 - 579 381 91</span>
+          </div>
+        </a>
+
+        <a href="mailto:irina@oogvoorjou.info" class="contact-method">
+          <div class="contact-method-icon">✉️</div>
+          <div class="contact-method-text">
+            <strong>E-mail</strong>
+            <span>irina@oogvoorjou.info</span>
+          </div>
+        </a>
+
+        <a href="https://wa.me/31657938191" class="contact-method">
+          <div class="contact-method-icon">💬</div>
+          <div class="contact-method-text">
+            <strong>WhatsApp</strong>
+            <span>Stuur een berichtje</span>
+          </div>
+        </a>
+
+        <div class="contact-note">
+          Niet zeker waar te beginnen? Bel gewoon. Irina legt rustig uit welke stappen passen bij jouw situatie.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────── -->
+<footer>
+  <p class="footer-logo">Oog voor <span>Jou</span></p>
+  <p>Dementiebegeleiding aan huis · Tilburg & omgeving</p>
+  <p style="margin-top:1rem;">
+    <a href="tel:0657938191">06 579 381 91</a> · 
+    <a href="mailto:irina@oogvoorjou.info">irina@oogvoorjou.info</a>
+  </p>
+  <p style="margin-top:1.5rem; font-size:0.78rem;">
+    KvK: [invullen] · © 2025 Oog voor Jou Dementiebegeleiding
+  </p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => io.observe(el));
+
+  // Smooth nav highlight
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--terracotta)' : '';
+    });
+  });
+</script>
+
+</body>
+</html>
